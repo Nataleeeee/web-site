@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Mukta', sans-serif ;
+    box-sizing: border-box;
+    background-color: #f0edf3;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+    --mb-0-25: .25rem;
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+}
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background: color:rgb(172, 47, 47);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color:#190019;
+    cursor: pointer;
+}
+.logo::first-letter{
+    font-size: 40px;
+    border: 2px solid #ddcdf2;
+    border-right: transparent;
+    padding-left: spx;
+    color: #763983;
+
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 10px;
+
+}
+nav ul li a{
+    color: #1d1d24;
+    position: relative;
+    padding: 5px 0;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color:rgb(172, 47, 47);
+}
+nav ul li a::after{
+    content: "";
+    bottom: 0;
+    left:0;
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background:  color:rgb(172, 47, 47);
+    transition: .3s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.btn{
+    color:  color:rgb(172, 47, 47);
+    font-size: 16px;
+    text-transform: uppercase;
+    background:  color:rgb(172, 47, 47);
+    padding: 10px 30px;
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all .4s ease-in-out;
+    border: solid  color:rgb(172, 47, 47);
+
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #884179;
+    background: transparent;
+    box-shadow: 0 0 5px rgb(149, 49, 127),0 0 10px rgb(85, 34, 99),0 0 15px rgb(96, 28, 125);
+    font-weight: bold;
+    color:  color:rgb(172, 47, 47);
+}
+.detail{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+.detail h1{
+    color: #1d1d25;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+}
+.detail h1 span{
+    color:  color:rgb(172, 47, 47);
+}
+.detail p{
+    color: #1d1d25;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+}
+.image img{
+    display: block;
+    width:100%;
+    height: auto;
+
+
+}
+.image{
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    bottom: 10px;
+    right: 200px;
+    
+
+}
+
+
+
+.image-container {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 50%; 
+    right: 10px;
+    transform: translateY(-50%); 
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.about {
+    background-color: #43073a;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about h2 {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.about p {
+    font-size: 16px;
+    color: #000000;
+}
+
+.about img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.education {
+    background-color: #43073a;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.education h2 {
+    font-size: 30px;
+    color: #000000;
+}
+
+.education-entry {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #0c0a0a;
+    border-radius: 5px;
+}
+
+.education-entry h3 {
+    font-size: 18px;
+    color:#000000;
+}
+
+.education-entry p {
+    font-size: 16px;
+    color: #000000;
+}
+
+.skill {
+    background-color: #43073a;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill h2 {
+    font-size: 30px;
+    color: #000000;
+}
+
+.skill-entry {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #0c0a0a;
+    border-radius: 5px;
+}
+
+.skill-entry h3 {
+    font-size: 18px;
+    color:#000000;
+}
+
+.skill-entry p {
+    font-size: 16px;
+    color: #000000;
+}
+
+
+.contact {
+    background-color: #43073a;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 60%; }
+
+.contact h2 {
+    font-size: 24px;
+    color: #000000;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 18px;
+    color: #000000;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+button {
+    background-color: #0077b6;
+    color: #eee0e0;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #43073a;
+}
+
+.contact {
+    background-color: #43073a;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 60%; 
+}
+
+.contact h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.phone-number {
+    font-weight: bold;
+}
+
+
